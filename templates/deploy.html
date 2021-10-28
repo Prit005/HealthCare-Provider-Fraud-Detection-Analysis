@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body style="background-color:#2196f3">
+    
+    <div class="form-style-2">
+        <div class="form-style-2-heading"><h1 style="color: darkgreen;">Healthcare Provider Fraud Detection Analysis</h1></div> 
+        <div class="cent">
+        <form action="/predict" method="post">
+        
+            <!-- provider details -->
+            <h2>Provider Details</h2>
+            <label><span>Provider ID : </span>
+                <select class="select-field" name="Provider">
+                    <option>Select</option><option>PRV51978</option><option>PRV56442</option><option>PRV53385</option><option>PRV52895</option><option>PRV51037</option><option>PRV53911</option><option>PRV54040</option><option>PRV56587</option><option>PRV55633</option><option>PRV55175</option><option>PRV54237</option><option>PRV51708</option><option>PRV57117</option><option>PRV53997</option><option>PRV57413</option><option>PRV54275</option><option>PRV55215</option><option>PRV56011</option><option>PRV52395</option><option>PRV52365</option><option>PRV55163</option><option>PRV53797</option><option>PRV57467</option><option>PRV57305</option>
+                </select></label>
+        
+            <!-- patient details -->
+            <h2>Patient Details </h2>
+            <label><span>Beneficiary ID : </span>
+                <select class="select-field" name="BeneID">
+                    <option>Select</option><option>BENE42721</option><option>BENE152160</option><option>BENE93394</option><option>BENE41652</option><option>BENE79068</option><option>BENE124152</option><option>BENE47928</option><option>BENE109228</option><option>BENE123655</option><option>BENE96676</option><option>BENE136547</option><option>BENE80671</option><option>BENE50429</option><option>BENE69531</option><option>BENE115376</option><option>BENE76574</option><option>BENE119007</option><option>BENE103886</option><option>BENE121788</option><option>BENE42867</option><option>BENE133063</option><option>BENE34620</option><option>BENE113793</option><option>BENE44241</option> 
+                </select></label>
+                
+            <label><span>Gender : </span>
+                <select class="select-field" name="Gender">
+                    <option>Select</option> <option>1</option><option>2</option>           
+                </select></label>
+
+            <label><span>Race : </span>
+                <select class="select-field" name="Race">
+                    <option>Select</option><option>1</option><option>2</option><option>3</option><option>5</option>
+                </select></label>
+            
+            <label><span>RenalDiseaseIndicator : </span>
+                <select class="select-field" name="RenalDiseaseIndicator">
+                    <option>Select</option><option>0</option><option>1</option> 
+                </select></label>
+            
+            <label><span>State : </span>
+                <select class="select-field" name="State">
+                    <option>Select</option> <option>5</option><option>10</option><option>33</option><option>45</option><option>14</option><option>39</option><option>23</option><option>36</option><option>34</option><option>11</option><option>31</option><option>49</option><option>44</option><option>15</option><option>22</option><option>26</option><option>50</option><option>21</option><option>42</option><option>18</option><option>1</option><option>52</option><option>3</option><option>19</option><option>24</option><option>4</option><option>16</option><option>6</option><option>37</option><option>25</option><option>7</option><option>38</option><option>17</option><option>51</option><option>54</option><option>28</option><option>20</option><option>32</option><option>46</option><option>13</option><option>30</option><option>43</option><option>27</option><option>29</option><option>47</option><option>12</option><option>8</option><option>41</option><option>53</option><option>35</option><option>2</option><option>9</option>
+                </select></label>
+            
+            <label><span>Country : </span>
+                <select class="select-field" name="County">
+                      <option>Select</option> <option>200</option><option>10</option><option>20</option><option>470</option><option>60</option><option>400</option><option>0</option><option>90</option><option>160</option><option>150</option><option>490</option><option>590</option><option>310</option><option>141</option><option>250</option><option>130</option><option>620</option><option>290</option><option>170</option><option>50</option><option>390</option><option>480</option><option>40</option><option>440</option><option>120</option><option>510</option><option>70</option><option>100</option><option>240</option><option>270</option><option>30</option><option>280</option><option>810</option><option>610</option><option>260</option><option>530</option><option>80</option><option>420</option><option>350</option><option>700</option><option>550</option><option>140</option><option>370</option><option>410</option><option>460</option><option>330</option><option>430</option><option>220</option><option>300</option><option>320</option><option>570</option><option>500</option><option>580</option><option>910</option><option>520</option><option>780</option><option>360</option><option>770</option><option>230</option><option>650</option><option>540</option><option>190</option><option>340</option><option>331</option><option>560</option><option>110</option><option>630</option><option>210</option><option>180</option><option>940</option><option>600</option><option>380</option><option>800</option><option>640</option><option>660</option><option>450</option><option>680</option><option>750</option><option>720</option><option>860</option><option>690</option><option>710</option><option>730</option><option>760</option><option>740</option><option>670</option><option>840</option><option>890</option><option>830</option><option>790</option><option>970</option><option>989</option><option>880</option><option>920</option><option>820</option><option>960</option><option>921</option><option>999</option><option>900</option><option>850</option><option>950</option><option>991</option><option>930</option><option>791</option><option>801</option><option>892</option><option>870</option><option>986</option><option>451</option><option>981</option><option>988</option><option>990</option><option>622</option><option>564</option><option>982</option><option>980</option><option>641</option><option>911</option><option>411</option><option>843</option><option>953</option><option>711</option><option>194</option><option>11</option><option>241</option><option>591</option><option>551</option><option>794</option><option>974</option><option>291</option><option>581</option><option>288</option><option>653</option><option>984</option><option>973</option><option>992</option><option>563</option><option>971</option><option>461</option><option>885</option><option>731</option><option>341</option><option>948</option><option>951</option><option>561</option><option>421</option><option>771</option><option>734</option><option>881</option><option>462</option><option>631</option><option>962</option><option>757</option><option>511</option><option>983</option><option>891</option><option>342</option><option>946</option><option>861</option><option>821</option><option>111</option><option>251</option><option>961</option><option>841</option><option>772</option><option>994</option><option>879</option><option>191</option><option>838</option><option>812</option><option>651</option><option>913</option><option>743</option><option>654</option><option>792</option><option>977</option><option>701</option><option>978</option><option>832</option><option>947</option><option>945</option><option>831</option><option>942</option><option>541</option><option>281</option><option>88</option><option>222</option><option>756</option><option>882</option><option>972</option><option>802</option><option>751</option><option>758</option><option>343</option><option>883</option><option>702</option><option>943</option><option>996</option><option>471</option><option>611</option><option>722</option><option>601</option><option>671</option><option>976</option><option>811</option><option>754</option><option>985</option><option>552</option><option>621</option><option>312</option><option>954</option><option>979</option><option>993</option><option>987</option><option>952</option><option>871</option><option>842</option><option>25</option><option>213</option><option>381</option><option>301</option><option>782</option><option>867</option><option>311</option><option>888</option><option>803</option><option>884</option><option>941</option><option>902</option><option>752</option><option>874</option><option>531</option><option>321</option><option>55</option><option>522</option><option>681</option><option>703</option><option>431</option><option>975</option><option>901</option><option>652</option><option>361</option><option>761</option><option>783</option><option>582</option><option>795</option><option>691</option><option>221</option><option>391</option><option>845</option><option>362</option><option>212</option><option>271</option><option>292</option><option>661</option><option>893</option><option>822</option><option>223</option><option>161</option><option>785</option><option>542</option><option>905</option><option>741</option><option>955</option><option>131</option><option>592</option><option>328</option><option>862</option><option>851</option><option>392</option><option>797</option><option>441</option><option>932</option><option>886</option><option>949</option><option>211</option><option>113</option><option>904</option><option>34</option><option>887</option><option>875</option><option>835</option><option>844</option><option>632</option><option>963</option><option>1</option><option>117</option><option>878</option><option>84</option><option>662</option><option>224</option><option>912</option><option>793</option><option>562</option><option>784</option><option>612</option><option>672</option><option>583</option><option>903</option><option>755</option><option>873</option><option>744</option><option>412</option><option>14</option><option>931</option><option>876</option><option>796</option><option>712</option><option>753</option><option>944</option><option>742</option><option>834</option><option>521</option><option>804</option>
+                </select></label>
+
+            
+            <!-- pre treatment details -->
+            <h2>Patient recognized with ChronicCond PreTreatment(1 or 2)</h2>
+            <label><span>Alzheimer : </span>
+                <input type="text" class="input-field" name="ChronicCond_Alzheimer" required="required"/></label>
+            <label><span>Heartfailure : </span>
+                <input type="text" class="input-field" name="ChronicCond_Heartfailure" required="required"/></label>
+            <label><span>KidneyDisease :  </span>
+                <input type="text" class="input-field" name="ChronicCond_KidneyDisease" required="required"/></label>
+            <label><span>Cancer : </span>
+                <input type="text" class="input-field" name="ChronicCond_Cancer" required="required"/></label><br>
+            <label><span>ObstrPulmonary : </span>
+                <input type="text" class="input-field" name="ChronicCond_ObstrPulmonary" required="required"/></label>
+            <label><span>Depression : </span>
+                <input type="text" class="input-field" name="ChronicCond_Depression" required="required"/></label>
+            <label><span>Diabetes : </span>
+                <input type="text" class="input-field" name="ChronicCond_Diabetes" required="required"/></label><br>
+            <label><span>IschemicHeart : </span>
+                <input type="text" class="input-field" name="ChronicCond_IschemicHeart" required="required"/></label>
+            <label><span>Osteoporasis : </span>
+                <input type="text" class="input-field" name="ChronicCond_Osteoporasis" required="required"/></label>
+            <label><span>Arthritis : </span>
+                <input type="text" class="input-field" name="ChronicCond_rheumatoidarthritis" required="required"/></label>
+            <label><span>Stroke : </span>
+                <input type="text" class="input-field" name="ChronicCond_stroke" required="required"/></label>
+                
+            </style>
+
+
+<!-- physician details -->
+<h2>Physician Details </h2>
+    <label><span>AttendingPhysician : </span>
+    <select class="select-field" name="AttendingPhysician">
+        <option>Select</option> <option>PHY330576</option><option>PHY315275</option><option>PHY327046</option><option>PHY367255</option><option>PHY367430</option><option>PHY433374</option><option>PHY315358</option><option>PHY432918</option><option>PHY365595</option><option>PHY411541</option><option>PHY387126</option><option>PHY402937</option><option>PHY340472</option><option>PHY415259</option><option>PHY329874</option><option>PHY352753</option><option>PHY315179</option><option>PHY415964</option><option>PHY365810</option><option>PHY388516</option><option>PHY351121</option><option>PHY379971</option><option>PHY365993</option><option>PHY325288</option><option>PHY350610</option><option>PHY433436</option>
+    </select></label>
+    
+<label><span>OperatingPhysician : </span>
+    <select class="select-field" name="OperatingPhysician">
+        <option>Select</option> <option>0</option><option>PHY418434</option><option>PHY360179</option><option>PHY331728</option><option>PHY410385</option><option>PHY424785</option><option>PHY320707</option><option>PHY399312</option><option>PHY412706</option><option>PHY315892</option><option>PHY361064</option><option>PHY329415</option><option>PHY426351</option><option>PHY428827</option><option>PHY334410</option><option>PHY382987</option><option>PHY412103</option><option>PHY425647</option><option>PHY317665</option>
+    </select></label>
+                
+<label><span>OtherPhysician : </span>
+    <select class="select-field" name="OtherPhysician">
+        <option>Select</option> <option>0</option><option>PHY418434</option><option>PHY360179</option><option>PHY331728</option><option>PHY410385</option><option>PHY424785</option><option>PHY320707</option><option>PHY399312</option><option>PHY412706</option><option>PHY315892</option><option>PHY361064</option><option>PHY329415</option><option>PHY426351</option><option>PHY428827</option><option>PHY334410</option><option>PHY382987</option><option>PHY412103</option><option>PHY425647</option><option>PHY317665</option>
+    </select></label>
+
+<label><span>ClmAdmitDiagnosisCode : </span>
+    <select class="select-field" name="ClmAdmitDiagnosisCode">
+        <option>Select</option> <option>PHY330576</option><option>PHY315275</option><option>PHY327046</option><option>PHY367255</option><option>PHY367430</option><option>PHY433374</option><option>PHY315358</option><option>PHY432918</option><option>PHY365595</option><option>PHY411541</option><option>PHY387126</option><option>PHY402937</option><option>PHY340472</option><option>PHY415259</option><option>PHY329874</option><option>PHY352753</option><option>PHY315179</option><option>PHY415964</option><option>PHY365810</option><option>PHY388516</option><option>PHY351121</option><option>PHY379971</option><option>PHY365993</option><option>PHY325288</option><option>PHY350610</option><option>PHY433436</option>
+    </select></label>
+<label><span>DiagnosisGroupCode : </span>
+    <select class="select-field" name="DiagnosisGroupCode">
+        <option>Select</option> <option>4019</option><option>4011</option><option>2724</option><option>2720</option><option>2722</option><option>2721</option><option>2723</option><option>78659</option><option>42731</option><option>78650</option><option>7802</option><option>78651</option><option>25000</option><option>42789</option><option>42781</option><option>V5789</option><option>41401</option><option>78079</option><option>486</option><option>42732</option><option>185</option><option>4271</option><option>4279</option><option>42769</option><option>42761</option><option>7915</option><option>V4585</option><option>79029</option><option>79021</option><option>7851</option>
+    </select></label>
+            
+            <!-- days admitted -->
+            <h2> Duration </h2>
+            <label><span>Age of Patients : </span>
+                <input type="text" class="input-field" name="Age_Of_Patients" placeholder="Enter Number of day from 1 to 36" required="required"/></label>
+                
+            <label><span>Number of days Stay in Hospital : </span>
+                <input type="text" class="input-field" name="Hospital_stay_Duration" placeholder="Enter Number of day from 1 to 36" required="required"/></label>
+                
+            <label><span>Number of days for Claim Duration : </span>
+                <input type="text" class="input-field" name="Claim_Duration" placeholder="Enter Number of day from 1 to 36" required="required"/></label>
+                
+            <!-- amount claimed details -->
+            <h2>Insurance Amount Reimbursed by Patient</h2>
+            <label><span>Total Insurance Amount Reimbursed : </span>
+                <input type="text" class="input-field" name="InscClaimAmtReimbursed" placeholder="Enter Amount between 1 to 80000" required="required"/></label><br>
+            <label><span>Total Deductible Amount Paid : </span>
+                <input type="text" class="input-field" name="DeductibleAmtPaid" placeholder="Enter Amount between 1 to 900" required="required"/></label><br>
+            <label><span>Amount Left Reimbursed : </span>
+                <input type="text" class="input-field" name="Amount_left_reimburse" placeholder="Enter Amount between 1 to 120000" required="required"/></label><br>
+            
+                
+            <!-- treatment details -->
+            <h2>Treatment Undergone by Patient</h2>
+            <h4>Diagnosis :</h4>
+                
+            <label><span>Diagnosis 1 : </span>
+                <select class="select-field" name="Diagnosis_Code_4019">
+                    <option>Select</option> <option>0</option>                   
+                </select></label>
+            <label><span>Diagnosis 2 : </span>
+                <select class="select-field" name="Diagnosis_Code_25000">
+                    <option>Select</option> <option>0</option><option>1</option>
+                </select></label>
+            <label><span>Diagnosis 3 : </span>
+                <select class="select-field" name="Diagnosis_Code_2724">
+                    <option>Select</option> <option>0</option><option>1</option>
+                </select></label>
+            <label><span>Diagnosis 4 : </span>
+                <select class="select-field" name="Diagnosis_Code_V5869">
+                    <option>Select</option><option>0</option><option>1</option>
+                </select></label>
+            <label><span>Diagnosis 5 : </span>
+                <select class="select-field" name="Diagnosis_Code_4011">
+                    <option>Select</option><option>0</option><option>1</option>
+                </select></label>
+            <label><span>Diagnosis 6 : </span>
+                <select class="select-field" name="Diagnosis_Code_42731">
+                    <option>Select</option><option>0</option><option>1</option>
+                </select></label>
+            <label><span>Diagnosis 7 : </span>
+                <select class="select-field" name="Diagnosis_Code_V5861">
+                    <option>Select</option> <option>0</option><option>1</option>
+                </select></label>
+            <label><span>Diagnosis 8 : </span>
+                <select class="select-field" name="Diagnosis_Code_2720">
+                    <option>Select</option>  <option>0</option><option>1</option>
+                </select></label>
+            <label><span>Diagnosis 9 : </span>
+                <select class="select-field" name="Diagnosis_Code_2449">
+                    <option>Select</option> <option>0</option><option>1</option>
+                </select></label>
+            <label><span>Diagnosis 10 : </span>
+                <select class="select-field" name="Diagnosis_Code_4280">
+                    <option>Select</option> <option>0</option><option>1</option>
+                </select></label>
+            
+            <h4>Procedure :</h4>
+            <label><span>Procedure 1 : </span>
+                <select class="select-field" name="Procedure_Code_4019.0">
+                    <option>Select</option> <option>0</option><option>1</option>
+                </select></label>
+            <label><span>Procedure 2 : </span>
+                <select class="select-field" name="Procedure_Code_9904.0">
+                    <option>Select</option>  <option>0</option><option>1</option>
+                </select></label>
+            <label><span>Procedure 3 : </span>
+                <select class="select-field" name="Procedure_Code_2724.0">
+                    <option>Select</option> <option>0</option><option>1</option>
+                </select></label>
+            <label><span>Procedure 4 : </span>
+                <select class="select-field" name="Procedure_Code_8154.0">
+                    <option>Select</option>  <option>0</option><option>1</option>
+                </select></label>
+            <label><span>Procedure 5 : </span>
+                <select class="select-field" name="Procedure_Code_66.0">
+                    <option>Select</option>  <option>0</option><option>1</option>
+                </select></label>
+            <label><span>Procedure 6 : </span>
+                <select class="select-field" name="Procedure_Code_3893.0">
+                    <option>Select</option>  <option>0</option><option>1</option>
+                </select></label>
+            <label><span>Procedure 7 : </span>
+                <select class="select-field" name="Procedure_Code_3995.0">
+                    <option>Select</option>  <option>0</option><option>1</option>
+                </select></label>
+            <label><span>Procedure 8 : </span>
+                <select class="select-field" name="Procedure_Code_4516.0">
+                    <option>Select</option>  <option>0</option><option>1</option>
+                </select></label>
+            <label><span>Procedure 9 : </span>
+                <select class="select-field" name="Procedure_Code_3722.0">
+                    <option>Select</option>  <option>0</option><option>1</option>
+                </select></label>
+            <label><span>Procedure 10 : </span>
+                <select class="select-field" name="Procedure_Code_8151.0">
+                    <option>Select</option>  <option>0</option><option>1</option>
+                </select></label><br><br>
+                
+            <label><span> </span><input type="submit" value="Predict" /></label>
+            
+        </form>           
+        
+        <br><br><h3>{{ prediction_text }}<h3>
+            
+    </div>
+    </div>
+</body>
+</html>
