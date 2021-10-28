@@ -26,5 +26,5 @@ urllib3==1.26.7
 wcwidth==0.2.5
 Werkzeug==2.0.2
 yarg==0.1.9
-jsonify==0.5
+
 
