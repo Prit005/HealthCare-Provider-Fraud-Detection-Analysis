@@ -1,0 +1,1 @@
+web: sh setup.sh && flask run --server.port $PORT app.py
